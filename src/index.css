@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 215 35% 6%;
+    --foreground: 210 40% 98%;
+
+    --card: 215 30% 9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 215 30% 9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 158 84% 42%;
+    --primary-foreground: 215 35% 6%;
+    --primary-glow: 152 76% 55%;
+
+    --secondary: 215 25% 14%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 215 25% 12%;
+    --muted-foreground: 215 16% 65%;
+
+    --accent: 158 84% 42%;
+    --accent-foreground: 215 35% 6%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 25% 16%;
+    --input: 215 25% 16%;
+    --ring: 158 84% 42%;
+
+    --radius: 0.875rem;
+
+    --gradient-hero: radial-gradient(ellipse at top, hsl(158 84% 42% / 0.15), transparent 60%), linear-gradient(180deg, hsl(215 35% 6%), hsl(215 40% 4%));
+    --gradient-emerald: linear-gradient(135deg, hsl(158 84% 42%), hsl(152 76% 55%));
+    --gradient-card: linear-gradient(145deg, hsl(215 30% 10% / 0.8), hsl(215 30% 8% / 0.4));
+    --gradient-border: linear-gradient(135deg, hsl(158 84% 42% / 0.4), hsl(215 25% 20% / 0.1));
+
+    --shadow-glow: 0 0 40px hsl(158 84% 42% / 0.3);
+    --shadow-glow-lg: 0 10px 60px -10px hsl(158 84% 42% / 0.5);
+    --shadow-card: 0 8px 30px -8px hsl(215 50% 2% / 0.6);
+
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 215 35% 6%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 158 84% 42%;
+    --sidebar-primary-foreground: 215 35% 6%;
+    --sidebar-accent: 215 25% 14%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 215 25% 16%;
+    --sidebar-ring: 158 84% 42%;
+  }
+
+  .dark {
+    --background: 215 35% 6%;
+    --foreground: 210 40% 98%;
+    --card: 215 30% 9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 215 30% 9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 158 84% 42%;
+    --primary-foreground: 215 35% 6%;
+    --secondary: 215 25% 14%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 215 25% 12%;
+    --muted-foreground: 215 16% 65%;
+    --accent: 158 84% 42%;
+    --accent-foreground: 215 35% 6%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 215 25% 16%;
+    --input: 215 25% 16%;
+    --ring: 158 84% 42%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply relative rounded-2xl border border-border/60 bg-card/40 backdrop-blur-xl;
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-card);
+  }
+
+  .glass-card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:border-primary/40;
+  }
+  .glass-card-hover:hover {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-emerald);
+  }
+
+  .glow-button {
+    @apply relative overflow-hidden transition-all duration-300;
+    box-shadow: 0 0 0 hsl(var(--primary) / 0);
+  }
+  .glow-button:hover {
+    box-shadow: var(--shadow-glow-lg);
+    transform: translateY(-1px);
+  }
+
+  .section-padding {
+    @apply py-20 md:py-28;
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(hsl(var(--border) / 0.4) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--border) / 0.4) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+  }
+}
