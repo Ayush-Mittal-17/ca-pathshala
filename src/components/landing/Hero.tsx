@@ -25,10 +25,28 @@ const Hero = () => {
             Clarity & Coaching
           </h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-            Master CA Foundation, Intermediate & Final with India's top educators.
-            Structured live classes, unlimited mock tests, and 24/7 doubt support — all in one place.
-          </p>
+          <div className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+  
+            <p className="mb-4">
+              Master CA Foundation, Intermediate & Final with India's top educators.
+            </p>
+
+            <ul className="space-y-3 mt-4 flex flex-col items-center text-center">
+              <li className="flex items-center gap-2 justify-center">
+                <span className="text-emerald-400">✔</span>
+                Structured live classes
+              </li>
+              <li className="flex items-center gap-2 justify-center">
+                <span className="text-emerald-400">✔</span>
+                Unlimited mock tests
+              </li>
+              <li className="flex items-center gap-2 justify-center">
+                <span className="text-emerald-400">✔</span>
+                24/7 doubt support
+              </li>
+            </ul>
+
+          </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
             <Button variant="hero" size="xl" className="group">
