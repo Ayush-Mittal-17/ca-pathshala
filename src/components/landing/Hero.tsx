@@ -44,9 +44,9 @@ const Hero = () => {
           {/* Stats strip */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
             {[
-              { v: "50K+", l: "Active Students" },
-              { v: "92%", l: "Pass Rate" },
-              { v: "120+", l: "Expert Faculty" },
+              { v: "1K+", l: "Active Students" },
+              { v: "50%", l: "Pass Rate" },
+              { v: "10+", l: "Expert Faculty" },
               { v: "4.9★", l: "Student Rating" },
             ].map((s) => (
               <div key={s.l} className="text-center">

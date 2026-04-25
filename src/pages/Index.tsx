@@ -4,6 +4,7 @@ import Courses from "@/components/landing/Courses";
 import Features from "@/components/landing/Features";
 import Results from "@/components/landing/Results";
 import Testimonials from "@/components/landing/Testimonials";
+import Teacher from "@/components/landing/Teacher";
 import CTA from "@/components/landing/CTA";
 import Footer from "@/components/landing/Footer";
 
@@ -17,6 +18,7 @@ const Index = () => {
         <Features />
         <Results />
         <Testimonials />
+        <Teacher />
         <CTA />
       </main>
       <Footer />
