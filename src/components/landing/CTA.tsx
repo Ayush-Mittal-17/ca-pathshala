@@ -5,7 +5,7 @@ const perks = ["7-day free trial", "No credit card required", "Cancel anytime"];
 
 const CTA = () => {
   return (
-    <section className="section-padding relative overflow-hidden">
+    <section id="cta" className="section-padding relative overflow-hidden">
       <div className="container mx-auto">
         <div className="relative rounded-3xl border border-primary/30 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-background" />
@@ -23,11 +23,15 @@ const CTA = () => {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
               <Button variant="hero" size="xl" className="group">
+                <a href="https://wa.me/919315622678" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                 Get Started Free
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </a>
               </Button>
               <Button variant="outlineGlow" size="xl">
+                <a href="https://wa.me/919315622678" target="_blank" rel="noopener noreferrer">
                 Talk to a Mentor
+                </a>
               </Button>
             </div>
 

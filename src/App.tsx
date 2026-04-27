@@ -6,6 +6,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import CourseDetail from "./pages/CourseDetail.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy";   // ✅ added
+import Terms from "./pages/Terms";                   // ✅ added
 import FloatingWhatsAppButton from "@/components/FloatingWhatsAppButton";
 
 const queryClient = new QueryClient();
@@ -19,9 +21,15 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/courses/:slug" element={<CourseDetail />} />
+
+          {/* ✅ New Pages */}
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<Terms />} />
+
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+
         <FloatingWhatsAppButton />
       </BrowserRouter>
     </TooltipProvider>

@@ -50,12 +50,16 @@ const Hero = () => {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
             <Button variant="hero" size="xl" className="group">
+              <a href="#courses" className="flex items-center gap-2">
               Explore Courses
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </a>
             </Button>
             <Button variant="outlineGlow" size="xl" className="group">
+              <a href="#courses" className="flex items-center gap-2">
               <Play className="h-4 w-4 fill-current" />
-              Start Learning Free
+              Start Learning Now
+              </a>
             </Button>
           </div>
 

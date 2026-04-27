@@ -7,6 +7,7 @@ const links = [
   { href: "#features", label: "Why Us" },
   { href: "#results", label: "Results" },
   { href: "#testimonials", label: "Reviews" },
+  { href: "#faculty", label: "Teachers" },
 ];
 
 const Navbar = () => {
@@ -34,7 +35,7 @@ const Navbar = () => {
               <GraduationCap className="h-5 w-5 text-primary-foreground" />
             </div>
           </div>
-          <span className="font-display font-bold text-lg tracking-tight">
+          <span className="font-display font-bold text-xl tracking-tight">
             CA <span className="gradient-text">Pathshala</span>
           </span>
         </a>
@@ -44,7 +45,7 @@ const Navbar = () => {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
                 {l.label}
               </a>
@@ -53,11 +54,13 @@ const Navbar = () => {
         </ul>
 
         <div className="hidden md:flex items-center gap-3">
-          <Button variant="ghost" size="sm" className="text-foreground hover:bg-secondary">
+          <Button variant="ghost" size="sm" className="text-foreground">
             Sign In
           </Button>
           <Button size="sm" variant="hero">
-            Start Learning
+            <a href="https://wa.me/919315622678" target="_blank" rel="noopener noreferrer">
+              Start Learning
+            </a>
           </Button>
         </div>
 
